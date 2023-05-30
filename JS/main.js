@@ -1,21 +1,21 @@
-"use strict";
-
-// function cl() {
-//     const conf = confirm()
-//     if (conf == true) {
-//         document.querySelector('.btn').classList.add('btn__active')
-//     }
-//     else{
-//         document.querySelector('.btn').classList.add('btn__active-2')
-//     }
-// }
 
 
-const anwers = []
+const filmsNums = +prompt('Сколько фильмов вы уже посмотрели?' , '')
 
-anwers[0] = prompt("Сколько вам лет" , "")
-anwers[1] = prompt("Как вас зовут" , "")
-anwers[2] = prompt("Какая ваша фамилия" , "")
-console.log("qwe");
+const personalMovieDB = {
+    count: filmsNums,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
 
-document.write(anwers)
+const a = prompt('Один из последних просмотренных фильмов?', '')
+const b = prompt('На сколько оцените его?', '')
+const c = prompt('Один из последних просмотренных фильмов?', '')
+const d = prompt('На сколько оцените его?', '')
+
+personalMovieDB.movies[a] = b 
+personalMovieDB.movies[c] = d 
+
+console.log(personalMovieDB.movies);
